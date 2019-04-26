@@ -1,0 +1,353 @@
+$header-height: 50px;
+@mixin h2setting{
+  font-size: 150%;
+  font-weight: 900;
+  margin-bottom: 5%;
+  font-family: "Yu Gothic";
+}
+$tab: 841px;
+$sp: 600px;
+@mixin tab {
+  @media screen and (max-width: ($tab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media screen and (max-width: ($sp)) {
+    @content;
+  }
+}
+@mixin content-padding {
+  padding: 5% 10%;
+
+  @include tab {
+    padding: 4% 8%;
+  }
+
+  @include sp {
+    padding: 3% 5%;
+  }
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+
+
+header {
+  width: 100vw;
+  height: $header-height;
+  background-color: #fff;
+  border-bottom: 1px solid black;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+
+  nav#pc-menu {
+    ul {
+      display: flex;
+      height: $header-height;
+
+      li {
+        margin: auto 2%;
+
+        &:nth-child(1) {
+          margin-right: auto;
+        }
+
+        &:nth-child(n+2):nth-child(-n+5) {
+          @include sp {
+            display: none;
+          }
+        }
+
+        &:nth-child(6) {
+          display: none;
+          width: 7%;
+
+          @include sp {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  nav.humberger-nemu {
+    background-color: #fff;
+    width: 22vw;
+    line-height: 350%;
+    font-size: 120%;
+    position: absolute;
+    top: 0;
+    left: 100vw;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    padding-left: 5%;
+    // transform: translateX(-20vw)
+  }
+}
+
+.animation:active {
+  // transition: all 4000ms 0s linear;
+  transform: translateX(-800px);
+}
+
+
+
+article#main-img {
+  width: 100%;
+  height: 40vw;
+  margin-top: $header-height;
+  background-image: url(../img/top_bg.jpg);
+  background-size: cover;
+  background-position: 100% 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    color: #fff;
+    font-weight: bold;
+    font-size: 150%;
+    line-height: 180%;
+    text-align: center;
+
+    @include tab {
+      font-size: 130%;
+      line-height: 150%;
+    }
+
+    @include sp {
+      font-size: 100%;
+      line-height: 130%;
+    }
+  }
+}
+
+section#content-mission {
+  height: 40vw;
+  @include content-padding;
+
+  @include sp {
+    height: 70vw;
+  }
+
+  h2 {
+    @include h2setting;
+  }
+
+  section {
+    height: 80%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    p {
+      color: #666;
+      line-height: 140%;
+
+      @include tab {
+        font-size: 80%;
+        line-height: 120%;
+      }
+
+      @include sp {
+        font-size: 30%;
+        line-height: 100%;
+      }
+    }
+  }
+}
+
+section#content-service {
+  height: 50vw;
+  @include content-padding;
+  background-image: url(../img/bg_service.png);
+
+  @include sp {
+    height: 100vw;
+  }
+
+  h2 {
+    @include h2setting;
+  }
+
+  div {
+    height: 85%;
+    display: flex;
+    justify-content: space-between;
+
+    @include sp {
+      flex-direction: column;
+    }
+
+    section {
+      width: 30%;
+      height: 100%;
+      background-color: #fff;
+
+      @include sp {
+        width: 100%;
+        height: 33%;
+        display: flex;
+      }
+
+      img {
+        width: 100%;
+
+        @include sp {
+          height: 100%;
+          width: 40%;
+        }
+      }
+
+      div {
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        @include sp {
+          height: 100%;
+        }
+
+        h3 {
+          margin: 10% 0 10% 4%;
+          font-weight: bold;
+          font-size: 110%;
+
+          @include sp {
+            margin: 3% 0 3% 4%;
+          }
+        }
+
+        p {
+          margin: 0 4%;
+          color: #666;
+          line-height: 170%;
+          font-size: 90%;
+
+          @include tab {
+            line-height: 140%;
+            font-size: 60%;
+          }
+
+          @include sp {
+            line-height: 110%;
+            font-size: 40%
+          }
+        }
+      }
+    }
+  }
+}
+
+article#content-company {
+  height: 35vw;
+  background-color: #222;
+  color: #fff;
+  @include content-padding;
+
+  @include sp {
+    height: 38vw;
+  }
+
+  h2 {
+    @include h2setting;
+  }
+
+  table {
+    width: 100%;
+    height: 80%;
+    font-size: 90%;
+
+    @include sp {
+      height: 60%;
+      font-size: 70%;
+    }
+
+    tr {
+      border-bottom: 1px solid #fff;
+      vertical-align: middle;
+
+    &:nth-child(5) {
+
+      th {
+        vertical-align: top;
+        padding-top: 1.5%;
+        width: 30%;
+      }
+
+      td{
+        line-height: 130%;
+      }
+    }
+
+      th {
+        text-align: left;
+      }
+    }
+  }
+}
+
+article#content-contact {
+  height: 30vw;
+  background-color: #f5f5f5;
+  @include content-padding;
+
+  @include tab {
+    height: 34vw;
+  }
+
+  @include sp {
+    height: 60vw;
+  }
+
+  h2 {
+    @include h2setting;
+  }
+
+  div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    div {
+      width: 47%;
+      display: flex;
+      flex-direction: column;
+
+      input {
+        border: 1px solid #bcb6b6;
+        height: 14%;
+      }
+    }
+
+    textarea {
+      width: 47%;
+      border: 1px solid #bcb6b6;
+    }
+  }
+
+  input#send-button {
+    width: 40%;
+    height: 15%;
+    font-size: 100%;
+    color: #fff;
+    background-color: #000;
+    display: block;
+    margin: 3% auto;
+  }
+}
+
+footer {
+  background-color: #f5f5f5;
+  text-align: center;
+  color: #666;
+  padding: 3vw 0;
+  font-size: 60%;
+}

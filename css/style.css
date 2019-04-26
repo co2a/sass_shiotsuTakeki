@@ -1,0 +1,263 @@
+a {
+  color: #000;
+  text-decoration: none; }
+
+header {
+  width: 100vw;
+  height: 50px;
+  background-color: #fff;
+  border-bottom: 1px solid black;
+  position: fixed;
+  top: 0;
+  z-index: 1; }
+  header nav#pc-menu ul {
+    display: flex;
+    height: 50px; }
+    header nav#pc-menu ul li {
+      margin: auto 2%; }
+      header nav#pc-menu ul li:nth-child(1) {
+        margin-right: auto; }
+      @media screen and (max-width: 600px) {
+        header nav#pc-menu ul li:nth-child(n+2):nth-child(-n+5) {
+          display: none; } }
+      header nav#pc-menu ul li:nth-child(6) {
+        display: none;
+        width: 7%; }
+        @media screen and (max-width: 600px) {
+          header nav#pc-menu ul li:nth-child(6) {
+            display: block; } }
+  header nav.humberger-nemu {
+    background-color: #fff;
+    width: 22vw;
+    line-height: 350%;
+    font-size: 120%;
+    position: absolute;
+    top: 0;
+    left: 100vw;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    padding-left: 5%; }
+
+.animation:active {
+  transform: translateX(-800px); }
+
+article#main-img {
+  width: 100%;
+  height: 40vw;
+  margin-top: 50px;
+  background-image: url(../img/top_bg.jpg);
+  background-size: cover;
+  background-position: 100% 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  article#main-img h1 {
+    color: #fff;
+    font-weight: bold;
+    font-size: 150%;
+    line-height: 180%;
+    text-align: center; }
+    @media screen and (max-width: 841px) {
+      article#main-img h1 {
+        font-size: 130%;
+        line-height: 150%; } }
+    @media screen and (max-width: 600px) {
+      article#main-img h1 {
+        font-size: 100%;
+        line-height: 130%; } }
+
+section#content-mission {
+  height: 40vw;
+  padding: 5% 10%; }
+  @media screen and (max-width: 841px) {
+    section#content-mission {
+      padding: 4% 8%; } }
+  @media screen and (max-width: 600px) {
+    section#content-mission {
+      padding: 3% 5%; } }
+  @media screen and (max-width: 600px) {
+    section#content-mission {
+      height: 70vw; } }
+  section#content-mission h2 {
+    font-size: 150%;
+    font-weight: 900;
+    margin-bottom: 5%;
+    font-family: "Yu Gothic"; }
+  section#content-mission section {
+    height: 80%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    section#content-mission section p {
+      color: #666;
+      line-height: 140%; }
+      @media screen and (max-width: 841px) {
+        section#content-mission section p {
+          font-size: 80%;
+          line-height: 120%; } }
+      @media screen and (max-width: 600px) {
+        section#content-mission section p {
+          font-size: 30%;
+          line-height: 100%; } }
+
+section#content-service {
+  height: 50vw;
+  padding: 5% 10%;
+  background-image: url(../img/bg_service.png); }
+  @media screen and (max-width: 841px) {
+    section#content-service {
+      padding: 4% 8%; } }
+  @media screen and (max-width: 600px) {
+    section#content-service {
+      padding: 3% 5%; } }
+  @media screen and (max-width: 600px) {
+    section#content-service {
+      height: 100vw; } }
+  section#content-service h2 {
+    font-size: 150%;
+    font-weight: 900;
+    margin-bottom: 5%;
+    font-family: "Yu Gothic"; }
+  section#content-service div {
+    height: 85%;
+    display: flex;
+    justify-content: space-between; }
+    @media screen and (max-width: 600px) {
+      section#content-service div {
+        flex-direction: column; } }
+    section#content-service div section {
+      width: 30%;
+      height: 100%;
+      background-color: #fff; }
+      @media screen and (max-width: 600px) {
+        section#content-service div section {
+          width: 100%;
+          height: 33%;
+          display: flex; } }
+      section#content-service div section img {
+        width: 100%; }
+        @media screen and (max-width: 600px) {
+          section#content-service div section img {
+            height: 100%;
+            width: 40%; } }
+      section#content-service div section div {
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around; }
+        @media screen and (max-width: 600px) {
+          section#content-service div section div {
+            height: 100%; } }
+        section#content-service div section div h3 {
+          margin: 10% 0 10% 4%;
+          font-weight: bold;
+          font-size: 110%; }
+          @media screen and (max-width: 600px) {
+            section#content-service div section div h3 {
+              margin: 3% 0 3% 4%; } }
+        section#content-service div section div p {
+          margin: 0 4%;
+          color: #666;
+          line-height: 170%;
+          font-size: 90%; }
+          @media screen and (max-width: 841px) {
+            section#content-service div section div p {
+              line-height: 140%;
+              font-size: 60%; } }
+          @media screen and (max-width: 600px) {
+            section#content-service div section div p {
+              line-height: 110%;
+              font-size: 40%; } }
+
+article#content-company {
+  height: 35vw;
+  background-color: #222;
+  color: #fff;
+  padding: 5% 10%; }
+  @media screen and (max-width: 841px) {
+    article#content-company {
+      padding: 4% 8%; } }
+  @media screen and (max-width: 600px) {
+    article#content-company {
+      padding: 3% 5%; } }
+  @media screen and (max-width: 600px) {
+    article#content-company {
+      height: 38vw; } }
+  article#content-company h2 {
+    font-size: 150%;
+    font-weight: 900;
+    margin-bottom: 5%;
+    font-family: "Yu Gothic"; }
+  article#content-company table {
+    width: 100%;
+    height: 80%;
+    font-size: 90%; }
+    @media screen and (max-width: 600px) {
+      article#content-company table {
+        height: 60%;
+        font-size: 70%; } }
+    article#content-company table tr {
+      border-bottom: 1px solid #fff;
+      vertical-align: middle; }
+      article#content-company table tr:nth-child(5) th {
+        vertical-align: top;
+        padding-top: 1.5%;
+        width: 30%; }
+      article#content-company table tr:nth-child(5) td {
+        line-height: 130%; }
+      article#content-company table tr th {
+        text-align: left; }
+
+article#content-contact {
+  height: 30vw;
+  background-color: #f5f5f5;
+  padding: 5% 10%; }
+  @media screen and (max-width: 841px) {
+    article#content-contact {
+      padding: 4% 8%; } }
+  @media screen and (max-width: 600px) {
+    article#content-contact {
+      padding: 3% 5%; } }
+  @media screen and (max-width: 841px) {
+    article#content-contact {
+      height: 34vw; } }
+  @media screen and (max-width: 600px) {
+    article#content-contact {
+      height: 60vw; } }
+  article#content-contact h2 {
+    font-size: 150%;
+    font-weight: 900;
+    margin-bottom: 5%;
+    font-family: "Yu Gothic"; }
+  article#content-contact div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; }
+    article#content-contact div div {
+      width: 47%;
+      display: flex;
+      flex-direction: column; }
+      article#content-contact div div input {
+        border: 1px solid #bcb6b6;
+        height: 14%; }
+    article#content-contact div textarea {
+      width: 47%;
+      border: 1px solid #bcb6b6; }
+  article#content-contact input#send-button {
+    width: 40%;
+    height: 15%;
+    font-size: 100%;
+    color: #fff;
+    background-color: #000;
+    display: block;
+    margin: 3% auto; }
+
+footer {
+  background-color: #f5f5f5;
+  text-align: center;
+  color: #666;
+  padding: 3vw 0;
+  font-size: 60%; }
+
+/*# sourceMappingURL=style.css.map */
